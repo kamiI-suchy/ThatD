@@ -138,50 +138,80 @@ Układ:
 \end{cases}
 \]
 
-Z trzeciego równania:
+Zapisujemy macierz rozszerzoną i wykonujemy operacje elementarne:
 \[
-2t-y=2\quad\Longrightarrow\quad t=1+\frac y2.
+\left[
+\begin{array}{rrrr|r}
+-7&-3& 5& 2&-6\\
+ 5& 1&-3&-2& 6\\
+ 2& 0&-1& 0& 2\\
+-2&-2& 2& 1&-1\\
+ 6& 2&-4&-2& 6
+\end{array}
+\right]
+\xrightarrow{R_1\leftrightarrow R_3}
+\left[
+\begin{array}{rrrr|r}
+2&0&-1&0&2\\
+5&1&-3&-2&6\\
+-7&-3&5&2&-6\\
+-2&-2&2&1&-1\\
+6&2&-4&-2&6
+\end{array}
+\right].
 \]
 
-Podstawiamy do drugiego:
-\begin{align*}
-5\left(1+\frac y2\right)+x-3y-2z&=6\\
-5+\frac{5y}{2}+x-3y-2z&=6\\
-x-\frac y2-2z&=1.
-\end{align*}
-
-Podstawiamy do czwartego:
-\begin{align*}
--2\left(1+\frac y2\right)-2x+2y+z&=-1\\
--2-y-2x+2y+z&=-1\\
--2x+y+z&=1.
-\end{align*}
-
-Podstawiamy do piątego:
-\begin{align*}
-6\left(1+\frac y2\right)+2x-4y-2z&=6\\
-6+3y+2x-4y-2z&=6\\
-2x-y-2z&=0\\
-x-\frac y2-z&=0.
-\end{align*}
-
-Porównując
+Następnie zerujemy pierwszą kolumnę pod pivotem:
 \[
-x-\frac y2-2z=1
-\quad\text{oraz}\quad
-x-\frac y2-z=0,
+\begin{aligned}
+R_2&\leftarrow 2R_2-5R_1,\\
+R_3&\leftarrow 2R_3+7R_1,\\
+R_4&\leftarrow R_4+R_1,\\
+R_5&\leftarrow R_5-3R_1.
+\end{aligned}
 \]
-od razu dostajemy
+\[
+\left[
+\begin{array}{rrrr|r}
+2&0&-1&0&2\\
+0&2&-1&-4&2\\
+0&-6&3&4&2\\
+0&-2&1&1&1\\
+0&2&-1&-2&0
+\end{array}
+\right].
+\]
+
+Zerujemy drugą kolumnę:
+\[
+\begin{aligned}
+R_3&\leftarrow R_3+3R_2,\\
+R_4&\leftarrow R_4+R_2,\\
+R_5&\leftarrow R_5-R_2,
+\end{aligned}
+\qquad
+\left[
+\begin{array}{rrrr|r}
+2&0&-1&0&2\\
+0&2&-1&-4&2\\
+0&0&0&-8&8\\
+0&0&0&-3&3\\
+0&0&0&2&-2
+\end{array}
+\right].
+\]
+
+Z trzeciego, czwartego i piątego wiersza dostajemy tę samą informację:
 \[
 z=-1.
 \]
-Wstawiamy do $x-\frac y2-z=0$:
+
+Po podstawieniu do drugiego i pierwszego równania:
 \[
-x-\frac y2+1=0\quad\Longrightarrow\quad x=-1+\frac y2.
+2x-y-4(-1)=2\ \Longrightarrow\ 2x-y=-2\ \Longrightarrow\ x=-1+\frac y2,
 \]
-A wcześniej mieliśmy
 \[
-t=1+\frac y2.
+2t-y=2\ \Longrightarrow\ t=1+\frac y2.
 \]
 Niech parametr wolny
 \[
